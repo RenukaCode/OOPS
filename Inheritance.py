@@ -116,3 +116,20 @@ p = Puppy()
 p.sound()                         # Output: Little Bark!
 p.owner()                         # Output: Has an owner
 
+
+# super():
+# -> lets the child class call the parent's method.
+# -> This is useful when you want to extend the parent's behaviour instead of completely replacing it.
+# Example:
+class Animal:
+    def sound(self):
+        print("Generic animal sound")
+class Dog(Animal):
+    def sound(self):
+        super().sound()                  # calling parent method
+        print("Bark! Bark!")
+d=Dog()                      
+d.sound()                  
+# Output:
+# Generic animal sound
+# Bark! Bark!
